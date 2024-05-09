@@ -1,0 +1,21 @@
+<%- include('./partials/header')%>
+
+<div class="gallery">
+  <% galleryData.forEach(picture => { %>
+
+  <figure>
+    <a href="/single/<%=picture.id%>">
+      <img src=<%=picture.url%> alt="">
+
+    </a>
+    <figcaption>
+      <div>
+        <p><%=picture.articlename%></p>
+        <p><%=picture.price%></p>
+      </div>
+      <p class="brand"><%=picture.brandname%></p>
+    </figcaption>
+  </figure>
+  <%}) %>
+</div>
+<%- include('./partials/footer')%>
